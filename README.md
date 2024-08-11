@@ -66,5 +66,14 @@ mvn surefire-report:report
 ```
 Test report should be gnerated under automated-tests/target/surefire-report.
 
+**Note**: [TrelloBoardUITests.java](trello-crud/automated-tests/src/test/java/com/trello/ui/TrelloBoardUITests.java) provides an automated UI test using Selenium and Safari webdriver. In order to make the test runnable make sure you install the Safari webdriver, or if you would like to use another webdriver make sure to update [BaseTest.java](trello-crud/automated-tests/src/test/java/com/trello/ui/BaseTest.java) on lines 
+```
+import org.openqa.selenium.safari.SafariDriver;
+```
+and
+```
+        driver = new SafariDriver();
+```
+
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
